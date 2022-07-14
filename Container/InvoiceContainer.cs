@@ -1,14 +1,17 @@
 using SalesOrderAPI.Models;
 using AutoMapper;
 using Microsoft.EntityFrameworkCore;
+using Serilog;
 public class InvoiceContainer : IInvoiceContainer
 {
     private readonly Sales_DBContext _DBContext;
     private readonly IMapper mapper;
-    public InvoiceContainer(Sales_DBContext dBContext, IMapper mapper)
+     private readonly ILogger<InvoiceContainer> _logger;
+    public InvoiceContainer(Sales_DBContext dBContext, IMapper mapper,ILogger<InvoiceContainer> _logger)
     {
         this._DBContext = dBContext;
         this.mapper = mapper;
+        this._logger=_logger;
     }
     public async Task<List<InvoiceHeader>> GetAllInvoiceHeader()
     {
