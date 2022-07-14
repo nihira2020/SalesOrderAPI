@@ -29,6 +29,7 @@ public class CustomerContainer : ICustomerContainer
 
     public async Task<CustomerEntity> Getbycode(string code)
     {
+        int c=Convert.ToInt32(code);
         var customerdata = await this._DBContext.TblCustomers.FirstOrDefaultAsync(item => item.Code == code);
         if (customerdata != null)
         {

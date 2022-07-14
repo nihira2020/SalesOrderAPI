@@ -1,6 +1,8 @@
 using SalesOrderAPI.Models;
 using Microsoft.EntityFrameworkCore;
 using AutoMapper;
+using Serilog;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -21,6 +23,13 @@ builder.Services.AddTransient<IProductContainer,ProductContainer>();
 var automapper=new MapperConfiguration(item=>item.AddProfile(new MappingProfile()));
 IMapper mapper=automapper.CreateMapper();
 builder.Services.AddSingleton(mapper);
+
+var _loggrer=new LoggerConfiguration()
+.ReadFrom.Configuration(builder.Configuration).Enrich.FromLogContext()
+// .MinimumLevel.Error()
+// .WriteTo.File("F:\\LaernCore\\Logs\\ApiLog-.log",rollingInterval:RollingInterval.Day)
+.CreateLogger();
+builder.Logging.AddSerilog(_loggrer);
 
 var app = builder.Build();
 
