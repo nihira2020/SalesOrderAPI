@@ -23,6 +23,13 @@ builder.Services.AddTransient<IProductContainer,ProductContainer>();
 var automapper=new MapperConfiguration(item=>item.AddProfile(new MappingProfile()));
 IMapper mapper=automapper.CreateMapper();
 builder.Services.AddSingleton(mapper);
+builder.Services.AddCors(options=>{
+options.AddDefaultPolicy(policy=>{
+policy.WithOrigins("http://localhost:4200");
+policy.AllowAnyHeader();
+policy.AllowAnyOrigin();
+});
+});
 
 var _loggrer=new LoggerConfiguration()
 .ReadFrom.Configuration(builder.Configuration).Enrich.FromLogContext()
@@ -34,11 +41,14 @@ builder.Logging.AddSerilog(_loggrer);
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
+// if (app.Environment.IsDevelopment())
+// {
     app.UseSwagger();
     app.UseSwaggerUI();
-}
+//}
+
+app.UseStaticFiles();
+app.UseCors();
 
 app.UseHttpsRedirection();
 

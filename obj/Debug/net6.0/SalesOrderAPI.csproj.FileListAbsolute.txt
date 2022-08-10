@@ -70,3 +70,4 @@ F:\LaernCore\SalesOrderAPI\bin\Debug\net6.0\Serilog.Settings.Configuration.dll
 F:\LaernCore\SalesOrderAPI\bin\Debug\net6.0\Serilog.Sinks.Console.dll
 F:\LaernCore\SalesOrderAPI\bin\Debug\net6.0\Serilog.Sinks.Debug.dll
 F:\LaernCore\SalesOrderAPI\bin\Debug\net6.0\Serilog.Sinks.File.dll
+F:\LaernCore\SalesOrderAPI\bin\Debug\net6.0\SalesOrderAPI.staticwebassets.runtime.json
