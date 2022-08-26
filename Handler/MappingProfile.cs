@@ -6,6 +6,8 @@ public class MappingProfile:Profile{
         CreateMap<TblSalesHeader,InvoiceHeader>().ReverseMap();
          CreateMap<TblSalesProductInfo,InvoiceDetail>().ReverseMap();
           CreateMap<TblProduct,ProductEntity>().ReverseMap();
+          CreateMap<TblProductvarinat,ProductVariantEntity>().ReverseMap();
+           CreateMap<TblMastervariant,VariantEntity>().ReverseMap();
     }
 
 }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "pxQqLJHqOR8iKbOXiRQ7QjdYw+q+hZvQIM8xIdt+l4Q=",
+  "Hash": "RdtqsaCuA7yxwAcCu6uATxrYpATRk8jYVF0DwdSouOE=",
   "Source": "SalesOrderAPI",
   "BasePath": "_content/SalesOrderAPI",
   "Mode": "Default",
@@ -66,23 +66,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Uploads\\Product\\p102\\image.png"
-    },
-    {
-      "Identity": "F:\\LaernCore\\SalesOrderAPI\\wwwroot\\Uploads\\Product\\p103\\image.png",
-      "SourceId": "SalesOrderAPI",
-      "SourceType": "Discovered",
-      "ContentRoot": "F:\\LaernCore\\SalesOrderAPI\\wwwroot\\",
-      "BasePath": "_content/SalesOrderAPI",
-      "RelativePath": "Uploads/Product/p103/image.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Uploads\\Product\\p103\\image.png"
     }
   ]
 }

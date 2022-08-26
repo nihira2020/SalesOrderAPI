@@ -106,6 +106,12 @@ public class ProductController : ControllerBase
         }
     }
 
+    [HttpPost("SaveProduct")]
+    public async Task<ResponseType> SaveProduct([FromBody] ProductEntity _product)
+    {
+        return await this._container.SaveProduct(_product);
+    }
+
 
     [NonAction]
     private string GetFilePath(string ProductCode)

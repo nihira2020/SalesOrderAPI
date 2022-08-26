@@ -18,7 +18,9 @@ namespace SalesOrderAPI.Models
 
         public virtual DbSet<TblCategory> TblCategories { get; set; } = null!;
         public virtual DbSet<TblCustomer> TblCustomers { get; set; } = null!;
+        public virtual DbSet<TblMastervariant> TblMastervariants { get; set; } = null!;
         public virtual DbSet<TblProduct> TblProducts { get; set; } = null!;
+        public virtual DbSet<TblProductvarinat> TblProductvarinats { get; set; } = null!;
         public virtual DbSet<TblRole> TblRoles { get; set; } = null!;
         public virtual DbSet<TblSalesHeader> TblSalesHeaders { get; set; } = null!;
         public virtual DbSet<TblSalesProductInfo> TblSalesProductInfos { get; set; } = null!;
@@ -63,6 +65,21 @@ namespace SalesOrderAPI.Models
                 entity.Property(e => e.Phoneno).HasMaxLength(50);
             });
 
+            modelBuilder.Entity<TblMastervariant>(entity =>
+            {
+                entity.ToTable("tbl_mastervariant");
+
+                entity.Property(e => e.Id).HasColumnName("ID");
+
+                entity.Property(e => e.VarinatType)
+                    .HasMaxLength(1)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.VarintName)
+                    .HasMaxLength(20)
+                    .IsUnicode(false);
+            });
+
             modelBuilder.Entity<TblProduct>(entity =>
             {
                 entity.HasKey(e => e.Code);
@@ -78,6 +95,25 @@ namespace SalesOrderAPI.Models
                     .IsUnicode(false);
 
                 entity.Property(e => e.Price).HasColumnType("decimal(18, 3)");
+
+                entity.Property(e => e.Remarks)
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
+            });
+
+            modelBuilder.Entity<TblProductvarinat>(entity =>
+            {
+                entity.ToTable("tbl_productvarinat");
+
+                entity.Property(e => e.Id).HasColumnName("ID");
+
+                entity.Property(e => e.Price).HasColumnType("decimal(18, 2)");
+
+                entity.Property(e => e.ProductCode)
+                    .HasMaxLength(20)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Remarks).HasMaxLength(100);
             });
 
             modelBuilder.Entity<TblRole>(entity =>
