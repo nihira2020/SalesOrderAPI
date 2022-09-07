@@ -8,6 +8,7 @@ public class MappingProfile:Profile{
           CreateMap<TblProduct,ProductEntity>().ReverseMap();
           CreateMap<TblProductvarinat,ProductVariantEntity>().ReverseMap();
            CreateMap<TblMastervariant,VariantEntity>().ReverseMap();
+            CreateMap<TblCategory,CategoryEntity>().ReverseMap();
     }
 
 }

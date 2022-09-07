@@ -24,6 +24,14 @@ public class MasterController : ControllerBase
         return await this._container.GetAllVariant(type);
 
     }
+
+    [HttpGet("GetCategory")]
+    public async Task<List<CategoryEntity>> GetCategory()
+    {
+      
+        return await this._container.GetCategory();
+
+    }
       
 
 }

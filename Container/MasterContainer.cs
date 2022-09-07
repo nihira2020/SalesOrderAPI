@@ -27,4 +27,17 @@ public class MasterContainer : IMasterContainer
 
     }
 
+    public async Task<List<CategoryEntity>> GetCategory()
+    {
+        var customerdata = await this._DBContext.TblCategories.ToListAsync();
+        if (customerdata != null && customerdata.Count > 0)
+        {
+            // we need use automapper
+
+            return this.mapper.Map<List<TblCategory>, List<CategoryEntity>>(customerdata);
+        }
+        return new List<CategoryEntity>();
+
+    }
+
 }

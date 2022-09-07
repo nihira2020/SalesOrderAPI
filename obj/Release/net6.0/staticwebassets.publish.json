@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "Hash": "caff/jrlWRrPVy4NEexJI+PqGPIHIbplXWUMI6WoEVk=",
+  "Source": "SalesOrderAPI",
+  "BasePath": "_content/SalesOrderAPI",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "SalesOrderAPI\\wwwroot",
+      "Source": "SalesOrderAPI",
+      "ContentRoot": "F:\\LaernCore\\SalesOrderAPI\\wwwroot\\",
+      "BasePath": "_content/SalesOrderAPI",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "F:\\LaernCore\\SalesOrderAPI\\wwwroot\\Uploads\\common\\noimage.png",
+      "SourceId": "SalesOrderAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\LaernCore\\SalesOrderAPI\\wwwroot\\",
+      "BasePath": "_content/SalesOrderAPI",
+      "RelativePath": "Uploads/common/noimage.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\common\\noimage.png"
+    },
+    {
+      "Identity": "F:\\LaernCore\\SalesOrderAPI\\wwwroot\\Uploads\\Product\\p101\\image.png",
+      "SourceId": "SalesOrderAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\LaernCore\\SalesOrderAPI\\wwwroot\\",
+      "BasePath": "_content/SalesOrderAPI",
+      "RelativePath": "Uploads/Product/p101/image.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\Product\\p101\\image.png"
+    },
+    {
+      "Identity": "F:\\LaernCore\\SalesOrderAPI\\wwwroot\\Uploads\\Product\\p102\\image.png",
+      "SourceId": "SalesOrderAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\LaernCore\\SalesOrderAPI\\wwwroot\\",
+      "BasePath": "_content/SalesOrderAPI",
+      "RelativePath": "Uploads/Product/p102/image.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\Product\\p102\\image.png"
+    }
+  ]
+}
