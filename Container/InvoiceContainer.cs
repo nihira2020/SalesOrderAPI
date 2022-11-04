@@ -43,7 +43,7 @@ public class InvoiceContainer : IInvoiceContainer
         return new List<InvoiceDetail>();
     }
 
-    public async Task<ResponseType> Save(InvoiceEntity invoiceEntity)
+    public async Task<ResponseType> Save(InvoiceInput invoiceEntity)
     {
         string Result = string.Empty;
         int processcount = 0;
@@ -53,14 +53,14 @@ public class InvoiceContainer : IInvoiceContainer
             using (var dbtransaction = await this._DBContext.Database.BeginTransactionAsync())
             {
 
-                if (invoiceEntity.header != null)
-                    Result = await this.SaveHeader(invoiceEntity.header);
+                if (invoiceEntity != null)
+                    Result = await this.SaveHeader(invoiceEntity);
 
                 if (!string.IsNullOrEmpty(Result) && (invoiceEntity.details != null && invoiceEntity.details.Count > 0))
                 {
                     invoiceEntity.details.ForEach(item =>
                     {
-                        bool saveresult = this.SaveDetail(item, invoiceEntity.header.CreateUser).Result;
+                        bool saveresult = this.SaveDetail(item, invoiceEntity.CreateUser).Result;
                         if (saveresult)
                         {
                             processcount++;
@@ -87,6 +87,11 @@ public class InvoiceContainer : IInvoiceContainer
                     response.Result = string.Empty;
                 }
 
+                // await this._DBContext.SaveChangesAsync();
+                //         await dbtransaction.CommitAsync();
+                //         response.Result = "pass";
+                //         response.KyValue = Result;
+
             };
         }
         else
@@ -97,13 +102,14 @@ public class InvoiceContainer : IInvoiceContainer
 
     }
 
-    private async Task<string> SaveHeader(InvoiceHeader invoiceHeader)
+    private async Task<string> SaveHeader(InvoiceInput invoiceHeader)
     {
         string Results = string.Empty;
 
         try
         {
-            TblSalesHeader _header = this.mapper.Map<InvoiceHeader, TblSalesHeader>(invoiceHeader);
+            TblSalesHeader _header = this.mapper.Map<InvoiceInput, TblSalesHeader>(invoiceHeader);
+            _header.InvoiceDate=DateTime.Now;
             var header = await this._DBContext.TblSalesHeaders.FirstOrDefaultAsync(item => item.InvoiceNo == invoiceHeader.InvoiceNo);
 
             if (header != null)

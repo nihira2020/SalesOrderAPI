@@ -35,7 +35,7 @@ public class InvoiceController : ControllerBase
     }
 
     [HttpPost("Save")]
-    public async Task<ResponseType> Save([FromBody] InvoiceEntity invoiceEntity)
+    public async Task<ResponseType> Save([FromBody] InvoiceInput invoiceEntity)
     {
         return await this._container.Save(invoiceEntity);
 

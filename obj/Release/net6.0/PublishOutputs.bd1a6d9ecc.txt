@@ -1,6 +1,11 @@
 F:\LaernCore\SalesOrderAPI\publish\SalesOrderAPI.exe
+F:\LaernCore\SalesOrderAPI\publish\publish\web.config
 F:\LaernCore\SalesOrderAPI\publish\appsettings.Development.json
 F:\LaernCore\SalesOrderAPI\publish\appsettings.json
+F:\LaernCore\SalesOrderAPI\publish\publish\appsettings.Development.json
+F:\LaernCore\SalesOrderAPI\publish\publish\appsettings.json
+F:\LaernCore\SalesOrderAPI\publish\publish\SalesOrderAPI.deps.json
+F:\LaernCore\SalesOrderAPI\publish\publish\SalesOrderAPI.runtimeconfig.json
 F:\LaernCore\SalesOrderAPI\publish\SalesOrderAPI.dll
 F:\LaernCore\SalesOrderAPI\publish\SalesOrderAPI.deps.json
 F:\LaernCore\SalesOrderAPI\publish\SalesOrderAPI.runtimeconfig.json

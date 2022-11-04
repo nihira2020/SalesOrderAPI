@@ -76,3 +76,8 @@ F:\LaernCore\SalesOrderAPI\bin\Debug\net6.0\publish\appsettings.Development.json
 F:\LaernCore\SalesOrderAPI\bin\Debug\net6.0\publish\appsettings.json
 F:\LaernCore\SalesOrderAPI\bin\Debug\net6.0\publish\SalesOrderAPI.deps.json
 F:\LaernCore\SalesOrderAPI\bin\Debug\net6.0\publish\SalesOrderAPI.runtimeconfig.json
+F:\LaernCore\SalesOrderAPI\bin\Debug\net6.0\publish\publish\web.config
+F:\LaernCore\SalesOrderAPI\bin\Debug\net6.0\publish\publish\appsettings.Development.json
+F:\LaernCore\SalesOrderAPI\bin\Debug\net6.0\publish\publish\appsettings.json
+F:\LaernCore\SalesOrderAPI\bin\Debug\net6.0\publish\publish\SalesOrderAPI.deps.json
+F:\LaernCore\SalesOrderAPI\bin\Debug\net6.0\publish\publish\SalesOrderAPI.runtimeconfig.json

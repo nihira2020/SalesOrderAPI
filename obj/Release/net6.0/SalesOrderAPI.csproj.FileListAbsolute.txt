@@ -71,3 +71,8 @@ F:\LaernCore\SalesOrderAPI\obj\Release\net6.0\refint\SalesOrderAPI.dll
 F:\LaernCore\SalesOrderAPI\obj\Release\net6.0\SalesOrderAPI.pdb
 F:\LaernCore\SalesOrderAPI\obj\Release\net6.0\SalesOrderAPI.genruntimeconfig.cache
 F:\LaernCore\SalesOrderAPI\obj\Release\net6.0\ref\SalesOrderAPI.dll
+F:\LaernCore\SalesOrderAPI\bin\Release\net6.0\publish\web.config
+F:\LaernCore\SalesOrderAPI\bin\Release\net6.0\publish\appsettings.Development.json
+F:\LaernCore\SalesOrderAPI\bin\Release\net6.0\publish\appsettings.json
+F:\LaernCore\SalesOrderAPI\bin\Release\net6.0\publish\SalesOrderAPI.deps.json
+F:\LaernCore\SalesOrderAPI\bin\Release\net6.0\publish\SalesOrderAPI.runtimeconfig.json
