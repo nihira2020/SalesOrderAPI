@@ -60,7 +60,7 @@ public class InvoiceContainer : IInvoiceContainer
                 {
                     invoiceEntity.details.ForEach(item =>
                     {
-                        bool saveresult = this.SaveDetail(item, invoiceEntity.CreateUser).Result;
+                        bool saveresult = this.SaveDetail(item, invoiceEntity.CreateUser,invoiceEntity.InvoiceNo).Result;
                         if (saveresult)
                         {
                             processcount++;
@@ -142,13 +142,14 @@ public class InvoiceContainer : IInvoiceContainer
         }
         return Results;
     }
-    private async Task<bool> SaveDetail(InvoiceDetail invoiceDetail, string User)
+    private async Task<bool> SaveDetail(InvoiceDetail invoiceDetail, string User,string InvoiceNo)
     {
         try
         {
             TblSalesProductInfo _detail = this.mapper.Map<InvoiceDetail, TblSalesProductInfo>(invoiceDetail);
             _detail.CreateDate = DateTime.Now;
             _detail.CreateUser = User;
+            _detail.InvoiceNo=InvoiceNo;
             await this._DBContext.TblSalesProductInfos.AddAsync(_detail);
             return true;
         }
