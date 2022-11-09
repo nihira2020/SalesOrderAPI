@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\LaernCore\\SalesOrderAPI\\SalesOrderAPI.csproj": {}
+    "F:\\LaernCore\\InvoiceAPI\\SalesOrderAPI.csproj": {}
   },
   "projects": {
-    "F:\\LaernCore\\SalesOrderAPI\\SalesOrderAPI.csproj": {
+    "F:\\LaernCore\\InvoiceAPI\\SalesOrderAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\LaernCore\\SalesOrderAPI\\SalesOrderAPI.csproj",
+        "projectUniqueName": "F:\\LaernCore\\InvoiceAPI\\SalesOrderAPI.csproj",
         "projectName": "SalesOrderAPI",
-        "projectPath": "F:\\LaernCore\\SalesOrderAPI\\SalesOrderAPI.csproj",
+        "projectPath": "F:\\LaernCore\\InvoiceAPI\\SalesOrderAPI.csproj",
         "packagesPath": "C:\\Users\\Natarajan\\.nuget\\packages\\",
-        "outputPath": "F:\\LaernCore\\SalesOrderAPI\\obj\\",
+        "outputPath": "F:\\LaernCore\\InvoiceAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -62,6 +62,10 @@
             "Microsoft.EntityFrameworkCore.Tools": {
               "target": "Package",
               "version": "[6.0.6, )"
+            },
+            "Polybioz.HtmlRenderer.PdfSharp.Core": {
+              "target": "Package",
+              "version": "[1.0.0, )"
             },
             "Serilog.AspNetCore": {
               "target": "Package",

@@ -519,6 +519,33 @@
           }
         }
       },
+      "PdfSharpCore/1.1.21": {
+        "type": "package",
+        "dependencies": {
+          "SixLabors.Fonts": "1.0.0-beta0009",
+          "SixLabors.ImageSharp": "1.0.0-beta0006"
+        },
+        "compile": {
+          "lib/netstandard2.0/PdfSharpCore.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/PdfSharpCore.dll": {}
+        }
+      },
+      "Polybioz.HtmlRenderer.PdfSharp.Core/1.0.0": {
+        "type": "package",
+        "dependencies": {
+          "PdfSharpCore": "1.1.21"
+        },
+        "compile": {
+          "lib/netcoreapp2.1/HtmlRenderer.Core.dll": {},
+          "lib/netcoreapp2.1/HtmlRenderer.PdfSharp.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.1/HtmlRenderer.Core.dll": {},
+          "lib/netcoreapp2.1/HtmlRenderer.PdfSharp.Core.dll": {}
+        }
+      },
       "Serilog/2.10.0": {
         "type": "package",
         "compile": {
@@ -640,6 +667,43 @@
         },
         "runtime": {
           "lib/net5.0/Serilog.Sinks.File.dll": {}
+        }
+      },
+      "SixLabors.Core/1.0.0-beta0008": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.5.1"
+        },
+        "compile": {
+          "lib/netcoreapp2.1/SixLabors.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.1/SixLabors.Core.dll": {}
+        }
+      },
+      "SixLabors.Fonts/1.0.0-beta0009": {
+        "type": "package",
+        "dependencies": {
+          "SixLabors.Core": "1.0.0-beta0008"
+        },
+        "compile": {
+          "lib/netstandard2.0/SixLabors.Fonts.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SixLabors.Fonts.dll": {}
+        }
+      },
+      "SixLabors.ImageSharp/1.0.0-beta0006": {
+        "type": "package",
+        "dependencies": {
+          "SixLabors.Core": "1.0.0-beta0007",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.1"
+        },
+        "compile": {
+          "lib/netcoreapp2.1/SixLabors.ImageSharp.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.1/SixLabors.ImageSharp.dll": {}
         }
       },
       "Swashbuckle.AspNetCore/6.2.3": {
@@ -1816,6 +1880,33 @@
         "version.txt"
       ]
     },
+    "PdfSharpCore/1.1.21": {
+      "sha512": "ZD83JHSAZgnnKjBQc4PgFEBNqUKHrmcSYaM2F5IKMhkjGbT6k30ejIyIwcR7PXVhXK/qSHRALExs3ToslHP/GQ==",
+      "type": "package",
+      "path": "pdfsharpcore/1.1.21",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard1.3/PdfSharpCore.dll",
+        "lib/netstandard2.0/PdfSharpCore.dll",
+        "pdfsharpcore.1.1.21.nupkg.sha512",
+        "pdfsharpcore.nuspec"
+      ]
+    },
+    "Polybioz.HtmlRenderer.PdfSharp.Core/1.0.0": {
+      "sha512": "C9EojDjpA8AVgYanheShfuvwpvUcUWpQgXEgSftcWMzicTo5+HU7Dni34xipmUV3YWoq+DO3dW4vuHJlAV2ybQ==",
+      "type": "package",
+      "path": "polybioz.htmlrenderer.pdfsharp.core/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "lib/netcoreapp2.1/HtmlRenderer.Core.dll",
+        "lib/netcoreapp2.1/HtmlRenderer.PdfSharp.Core.dll",
+        "polybioz.htmlrenderer.pdfsharp.core.1.0.0.nupkg.sha512",
+        "polybioz.htmlrenderer.pdfsharp.core.nuspec"
+      ]
+    },
     "Serilog/2.10.0": {
       "sha512": "+QX0hmf37a0/OZLxM3wL7V6/ADvC1XihXN4Kq/p6d8lCPfgkRdiuhbWlMaFjR9Av0dy5F0+MBeDmDdRZN/YwQA==",
       "type": "package",
@@ -1992,6 +2083,59 @@
         "lib/netstandard2.1/Serilog.Sinks.File.xml",
         "serilog.sinks.file.5.0.0.nupkg.sha512",
         "serilog.sinks.file.nuspec"
+      ]
+    },
+    "SixLabors.Core/1.0.0-beta0008": {
+      "sha512": "rrKPDN107tVOh+mUoNh+kHELa7WfYZREPPbYdiKJ3Rd6dex/UgDWDGBOjPJn4BBhmts/VGuaXMXyfT/BwiuH2g==",
+      "type": "package",
+      "path": "sixlabors.core/1.0.0-beta0008",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netcoreapp2.0/SixLabors.Core.dll",
+        "lib/netcoreapp2.0/SixLabors.Core.xml",
+        "lib/netcoreapp2.1/SixLabors.Core.dll",
+        "lib/netcoreapp2.1/SixLabors.Core.xml",
+        "lib/netstandard1.3/SixLabors.Core.dll",
+        "lib/netstandard1.3/SixLabors.Core.xml",
+        "lib/netstandard2.0/SixLabors.Core.dll",
+        "lib/netstandard2.0/SixLabors.Core.xml",
+        "sixlabors.core.1.0.0-beta0008.nupkg.sha512",
+        "sixlabors.core.nuspec"
+      ]
+    },
+    "SixLabors.Fonts/1.0.0-beta0009": {
+      "sha512": "jCSh8Ei/epW1zInmRReIovIzHGPB1zifwDaj4+Yb7aGCs5MbRHi69kl2+QM9Ov5X19IgKhHn833dd4S0OQ3sEw==",
+      "type": "package",
+      "path": "sixlabors.fonts/1.0.0-beta0009",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard1.3/SixLabors.Fonts.dll",
+        "lib/netstandard1.3/SixLabors.Fonts.xml",
+        "lib/netstandard2.0/SixLabors.Fonts.dll",
+        "lib/netstandard2.0/SixLabors.Fonts.xml",
+        "sixlabors.fonts.1.0.0-beta0009.nupkg.sha512",
+        "sixlabors.fonts.nuspec"
+      ]
+    },
+    "SixLabors.ImageSharp/1.0.0-beta0006": {
+      "sha512": "VHDX00uAzPWj5qFYE5xJZyr5Cx4Jtd3p2dfX7swSrzlQoPEZPXXwQ+O3Fc4hNWvaNvR1NAiXSb27Ts6yv3lMDw==",
+      "type": "package",
+      "path": "sixlabors.imagesharp/1.0.0-beta0006",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net472/SixLabors.ImageSharp.dll",
+        "lib/net472/SixLabors.ImageSharp.xml",
+        "lib/netcoreapp2.1/SixLabors.ImageSharp.dll",
+        "lib/netcoreapp2.1/SixLabors.ImageSharp.xml",
+        "lib/netstandard1.3/SixLabors.ImageSharp.dll",
+        "lib/netstandard1.3/SixLabors.ImageSharp.xml",
+        "lib/netstandard2.0/SixLabors.ImageSharp.dll",
+        "lib/netstandard2.0/SixLabors.ImageSharp.xml",
+        "sixlabors.imagesharp.1.0.0-beta0006.nupkg.sha512",
+        "sixlabors.imagesharp.nuspec"
       ]
     },
     "Swashbuckle.AspNetCore/6.2.3": {
@@ -2588,6 +2732,7 @@
       "Microsoft.EntityFrameworkCore.Design >= 6.0.6",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.6",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.6",
+      "Polybioz.HtmlRenderer.PdfSharp.Core >= 1.0.0",
       "Serilog.AspNetCore >= 5.0.0",
       "Swashbuckle.AspNetCore >= 6.2.3"
     ]
@@ -2599,11 +2744,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\LaernCore\\SalesOrderAPI\\SalesOrderAPI.csproj",
+      "projectUniqueName": "F:\\LaernCore\\InvoiceAPI\\SalesOrderAPI.csproj",
       "projectName": "SalesOrderAPI",
-      "projectPath": "F:\\LaernCore\\SalesOrderAPI\\SalesOrderAPI.csproj",
+      "projectPath": "F:\\LaernCore\\InvoiceAPI\\SalesOrderAPI.csproj",
       "packagesPath": "C:\\Users\\Natarajan\\.nuget\\packages\\",
-      "outputPath": "F:\\LaernCore\\SalesOrderAPI\\obj\\",
+      "outputPath": "F:\\LaernCore\\InvoiceAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -2654,6 +2799,10 @@
           "Microsoft.EntityFrameworkCore.Tools": {
             "target": "Package",
             "version": "[6.0.6, )"
+          },
+          "Polybioz.HtmlRenderer.PdfSharp.Core": {
+            "target": "Package",
+            "version": "[1.0.0, )"
           },
           "Serilog.AspNetCore": {
             "target": "Package",
