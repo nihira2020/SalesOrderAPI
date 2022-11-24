@@ -170,3 +170,8 @@ F:\LaernCore\InvoiceAPI\obj\Debug\net6.0\refint\SalesOrderAPI.dll
 F:\LaernCore\InvoiceAPI\obj\Debug\net6.0\SalesOrderAPI.pdb
 F:\LaernCore\InvoiceAPI\obj\Debug\net6.0\SalesOrderAPI.genruntimeconfig.cache
 F:\LaernCore\InvoiceAPI\obj\Debug\net6.0\ref\SalesOrderAPI.dll
+F:\LaernCore\InvoiceAPI\obj\Debug\net6.0\staticwebassets\msbuild.SalesOrderAPI.Microsoft.AspNetCore.StaticWebAssets.props
+F:\LaernCore\InvoiceAPI\obj\Debug\net6.0\staticwebassets\msbuild.build.SalesOrderAPI.props
+F:\LaernCore\InvoiceAPI\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.SalesOrderAPI.props
+F:\LaernCore\InvoiceAPI\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.SalesOrderAPI.props
+F:\LaernCore\InvoiceAPI\obj\Debug\net6.0\staticwebassets.pack.json

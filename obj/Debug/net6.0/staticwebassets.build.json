@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "lqF9xffJgWaiztDhnfhrveUZRvZXIpTLA+rn+wTIhXw=",
+  "Hash": "UOQ7/JteMG7iwXbTPOf5mBxLOyOxV449pGYnYOIdehs=",
   "Source": "SalesOrderAPI",
   "BasePath": "_content/SalesOrderAPI",
   "Mode": "Default",
@@ -16,6 +16,23 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "F:\\LaernCore\\InvoiceAPI\\wwwroot\\Uploads\\common\\logo.jpeg",
+      "SourceId": "SalesOrderAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\LaernCore\\InvoiceAPI\\wwwroot\\",
+      "BasePath": "_content/SalesOrderAPI",
+      "RelativePath": "Uploads/common/logo.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\common\\logo.jpeg"
+    },
     {
       "Identity": "F:\\LaernCore\\InvoiceAPI\\wwwroot\\Uploads\\common\\noimage.png",
       "SourceId": "SalesOrderAPI",
