@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "UOQ7/JteMG7iwXbTPOf5mBxLOyOxV449pGYnYOIdehs=",
+  "Hash": "0MXgw344azqUYhkOHe8qSvnSmSEXY8d0dpFCby0Fesc=",
   "Source": "SalesOrderAPI",
   "BasePath": "_content/SalesOrderAPI",
   "Mode": "Default",
@@ -8,19 +8,19 @@
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [
     {
-      "Name": "SalesOrderAPI\\wwwroot",
+      "Name": "SalesOrderAPI/wwwroot",
       "Source": "SalesOrderAPI",
-      "ContentRoot": "F:\\LaernCore\\InvoiceAPI\\wwwroot\\",
+      "ContentRoot": "/home/carlos/temp/dev/Fork Projects Github/SalesOrderAPI/wwwroot/",
       "BasePath": "_content/SalesOrderAPI",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "F:\\LaernCore\\InvoiceAPI\\wwwroot\\Uploads\\common\\logo.jpeg",
+      "Identity": "/home/carlos/temp/dev/Fork Projects Github/SalesOrderAPI/wwwroot/Uploads/common/logo.jpeg",
       "SourceId": "SalesOrderAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\LaernCore\\InvoiceAPI\\wwwroot\\",
+      "ContentRoot": "/home/carlos/temp/dev/Fork Projects Github/SalesOrderAPI/wwwroot/",
       "BasePath": "_content/SalesOrderAPI",
       "RelativePath": "Uploads/common/logo.jpeg",
       "AssetKind": "All",
@@ -31,13 +31,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Uploads\\common\\logo.jpeg"
+      "OriginalItemSpec": "wwwroot/Uploads/common/logo.jpeg"
     },
     {
-      "Identity": "F:\\LaernCore\\InvoiceAPI\\wwwroot\\Uploads\\common\\noimage.png",
+      "Identity": "/home/carlos/temp/dev/Fork Projects Github/SalesOrderAPI/wwwroot/Uploads/common/noimage.png",
       "SourceId": "SalesOrderAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\LaernCore\\InvoiceAPI\\wwwroot\\",
+      "ContentRoot": "/home/carlos/temp/dev/Fork Projects Github/SalesOrderAPI/wwwroot/",
       "BasePath": "_content/SalesOrderAPI",
       "RelativePath": "Uploads/common/noimage.png",
       "AssetKind": "All",
@@ -48,13 +48,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Uploads\\common\\noimage.png"
+      "OriginalItemSpec": "wwwroot/Uploads/common/noimage.png"
     },
     {
-      "Identity": "F:\\LaernCore\\InvoiceAPI\\wwwroot\\Uploads\\Product\\p101\\image.png",
+      "Identity": "/home/carlos/temp/dev/Fork Projects Github/SalesOrderAPI/wwwroot/Uploads/Product/p101/image.png",
       "SourceId": "SalesOrderAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\LaernCore\\InvoiceAPI\\wwwroot\\",
+      "ContentRoot": "/home/carlos/temp/dev/Fork Projects Github/SalesOrderAPI/wwwroot/",
       "BasePath": "_content/SalesOrderAPI",
       "RelativePath": "Uploads/Product/p101/image.png",
       "AssetKind": "All",
@@ -65,13 +65,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Uploads\\Product\\p101\\image.png"
+      "OriginalItemSpec": "wwwroot/Uploads/Product/p101/image.png"
     },
     {
-      "Identity": "F:\\LaernCore\\InvoiceAPI\\wwwroot\\Uploads\\Product\\p102\\image.png",
+      "Identity": "/home/carlos/temp/dev/Fork Projects Github/SalesOrderAPI/wwwroot/Uploads/Product/p102/image.png",
       "SourceId": "SalesOrderAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\LaernCore\\InvoiceAPI\\wwwroot\\",
+      "ContentRoot": "/home/carlos/temp/dev/Fork Projects Github/SalesOrderAPI/wwwroot/",
       "BasePath": "_content/SalesOrderAPI",
       "RelativePath": "Uploads/Product/p102/image.png",
       "AssetKind": "All",
@@ -82,7 +82,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Uploads\\Product\\p102\\image.png"
+      "OriginalItemSpec": "wwwroot/Uploads/Product/p102/image.png"
     }
   ]
 }

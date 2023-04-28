@@ -1,6 +1,8 @@
 using SalesOrderAPI.Models;
 using Microsoft.EntityFrameworkCore;
 using AutoMapper;
+using SalesOrderAPI.Infraestructure.Data;
+
 public class ProductContainer : IProductContainer
 {
 
