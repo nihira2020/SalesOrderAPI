@@ -2,6 +2,8 @@ using SalesOrderAPI.Models;
 using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
+using SalesOrderAPI.Infraestructure.Data;
+
 public class InvoiceContainer : IInvoiceContainer
 {
     private readonly Sales_DBContext _DBContext;

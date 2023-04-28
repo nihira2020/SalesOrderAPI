@@ -2,6 +2,9 @@ using SalesOrderAPI.Models;
 using Microsoft.EntityFrameworkCore;
 using AutoMapper;
 using Serilog;
+using SalesOrderAPI.Infraestructure.Data;
+using SalesOrderAPI.Extensions;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,11 +15,11 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<Sales_DBContext>(options =>
-{
-    options.UseSqlServer(builder.Configuration.GetConnectionString("connection"));
-});
-
+// builder.Services.AddDbContext<Sales_DBContext>(options =>
+// {
+//     options.UseSqlServer(builder.Configuration.GetConnectionString("connection"));
+// });
+ConnectionExtension.Connection(builder);
 builder.Services.AddTransient<ICustomerContainer, CustomerContainer>();
 builder.Services.AddTransient<IInvoiceContainer, InvoiceContainer>();
 builder.Services.AddTransient<IProductContainer, ProductContainer>();

@@ -1,0 +1,303 @@
+[2023-04-28 16:01:57.131 -03:00 [INF] Now listening on: https://localhost:7118
+][2023-04-28 16:01:58.245 -03:00 [INF] Now listening on: http://localhost:5075
+][2023-04-28 16:01:58.254 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+][2023-04-28 16:01:58.255 -03:00 [INF] Hosting environment: Development
+][2023-04-28 16:01:58.256 -03:00 [INF] Content root path: /home/carlos/temp/dev/Fork Projects Github/SalesOrderAPI/
+][2023-04-28 16:02:11.164 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger - -
+][2023-04-28 16:02:11.368 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger - - - 301 0 - 212.1418ms
+][2023-04-28 16:02:11.372 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - -
+][2023-04-28 16:02:11.442 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - - - 200 - text/html;charset=utf-8 69.3494ms
+][2023-04-28 16:02:11.795 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/swagger-ui.css - -
+][2023-04-28 16:02:11.799 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/swagger-ui-bundle.js - -
+][2023-04-28 16:02:11.799 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/swagger-ui-standalone-preset.js - -
+][2023-04-28 16:02:11.881 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - -
+][2023-04-28 16:02:11.911 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - - - 200 11966 application/javascript;+charset=utf-8 30.2201ms
+][2023-04-28 16:02:11.917 -03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+][2023-04-28 16:02:11.919 -03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+][2023-04-28 16:02:11.921 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/swagger-ui.css - - - 200 143632 text/css 125.9781ms
+][2023-04-28 16:02:11.923 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/swagger-ui-standalone-preset.js - - - 200 337162 application/javascript 123.8000ms
+][2023-04-28 16:02:12.061 -03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+][2023-04-28 16:02:12.063 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/swagger-ui-bundle.js - - - 200 1092889 application/javascript 264.0011ms
+][2023-04-28 16:02:12.468 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - -
+][2023-04-28 16:02:12.680 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 212.3219ms
+][2023-04-28 16:02:12.883 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/favicon-32x32.png - -
+][2023-04-28 16:02:12.884 -03:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+][2023-04-28 16:02:12.884 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/favicon-32x32.png - - - 200 628 image/png 1.0638ms
+][2023-04-28 16:02:21.731 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/Customer/GetAll - -
+][2023-04-28 16:02:21.745 -03:00 [INF] Executing endpoint 'SalesOrderAPI.Controllers.CustomerController.GetAll (SalesOrderAPI)'
+][2023-04-28 16:02:21.774 -03:00 [INF] Route matched with {action = "GetAll", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[CustomerEntity]] GetAll() on controller SalesOrderAPI.Controllers.CustomerController (SalesOrderAPI).
+][2023-04-28 16:02:23.041 -03:00 [INF] |Log ||Testing
+][2023-04-28 16:02:23.954 -03:00 [INF] Executed action SalesOrderAPI.Controllers.CustomerController.GetAll (SalesOrderAPI) in 2165.9169ms
+][2023-04-28 16:02:23.957 -03:00 [INF] Executed endpoint 'SalesOrderAPI.Controllers.CustomerController.GetAll (SalesOrderAPI)'
+][2023-04-28 16:02:24.139 -03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.ArgumentException: Identity value generation cannot be used for the property 'Code' on entity type 'TblProduct' because the property type is 'string'. Identity value generation can only be used with signed integer properties.
+   at Microsoft.EntityFrameworkCore.SqlServerPropertyExtensions.CheckValueGenerationStrategy(IReadOnlyProperty property, Nullable`1 value)
+   at Microsoft.EntityFrameworkCore.SqlServerPropertyExtensions.SetValueGenerationStrategy(IMutableProperty property, Nullable`1 value)
+   at Microsoft.EntityFrameworkCore.SqlServerPropertyBuilderExtensions.UseIdentityColumn(PropertyBuilder propertyBuilder, Int64 seed, Int32 increment)
+   at Microsoft.EntityFrameworkCore.SqlServerPropertyBuilderExtensions.UseIdentityColumn[TProperty](PropertyBuilder`1 propertyBuilder, Int64 seed, Int32 increment)
+   at SalesOrderAPI.Infraestructure.Mapping.TblProductMapping.Configure(EntityTypeBuilder`1 builder) in /home/carlos/temp/dev/Fork Projects Github/SalesOrderAPI/Infraestructure/Mapping/TblProductMapping.cs:line 19
+   at Microsoft.EntityFrameworkCore.ModelBuilder.ApplyConfiguration[TEntity](IEntityTypeConfiguration`1 configuration)
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Span`1& arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.EntityFrameworkCore.ModelBuilder.ApplyConfigurationsFromAssembly(Assembly assembly, Func`2 predicate)
+   at SalesOrderAPI.Infraestructure.Data.Sales_DBContext.OnModelCreating(ModelBuilder modelBuilder) in /home/carlos/temp/dev/Fork Projects Github/SalesOrderAPI/Infraestructure/Data/Sales_DBContext.cs:line 31
+   at Microsoft.EntityFrameworkCore.Infrastructure.ModelCustomizer.Customize(ModelBuilder modelBuilder, DbContext context)
+   at Microsoft.EntityFrameworkCore.Infrastructure.ModelSource.CreateModel(DbContext context, IConventionSetBuilder conventionSetBuilder, ModelDependencies modelDependencies)
+   at Microsoft.EntityFrameworkCore.Infrastructure.ModelSource.GetModel(DbContext context, ModelCreationDependencies modelCreationDependencies, Boolean designTime)
+   at Microsoft.EntityFrameworkCore.Internal.DbContextServices.CreateModel(Boolean designTime)
+   at Microsoft.EntityFrameworkCore.Internal.DbContextServices.get_Model()
+   at Microsoft.EntityFrameworkCore.Infrastructure.EntityFrameworkServicesBuilder.<>c.<TryAddCoreServices>b__8_4(IServiceProvider p)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitFactory(FactoryCallSite factoryCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   at Microsoft.EntityFrameworkCore.DbContext.get_ContextServices()
+   at Microsoft.EntityFrameworkCore.DbContext.get_Model()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityType()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.CheckState()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityQueryable()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.System.Collections.Generic.IAsyncEnumerable<TEntity>.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.ConfiguredCancelableAsyncEnumerable`1.GetAsyncEnumerator()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at CustomerContainer.Getall() in /home/carlos/temp/dev/Fork Projects Github/SalesOrderAPI/Container/CustomerContainer.cs:line 21
+   at SalesOrderAPI.Controllers.CustomerController.GetAll() in /home/carlos/temp/dev/Fork Projects Github/SalesOrderAPI/Controllers/CustomerController.cs:line 24
+   at lambda_method6(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+][2023-04-28 16:02:24.185 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/Customer/GetAll - - - 500 - text/plain;+charset=utf-8 2453.4011ms
+][2023-04-28 16:02:38.406 -03:00 [INF] Application is shutting down...
+][2023-04-28 16:05:05.112 -03:00 [INF] Entity Framework Core 6.0.6 initialized 'Sales_DBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.6' with options: None
+][2023-04-28 16:21:35.252 -03:00 [INF] Entity Framework Core 6.0.6 initialized 'Sales_DBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.6' with options: None
+][2023-04-28 16:22:18.793 -03:00 [INF] Entity Framework Core 6.0.6 initialized 'Sales_DBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.6' with options: None
+][2023-04-28 16:24:19.234 -03:00 [INF] Entity Framework Core 6.0.6 initialized 'Sales_DBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.6' with options: None
+][2023-04-28 16:24:23.044 -03:00 [INF] Executed DbCommand (2,894ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+CREATE DATABASE [SalesOrderApiDb];
+][2023-04-28 16:24:24.609 -03:00 [INF] Executed DbCommand (1,555ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [SalesOrderApiDb] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+][2023-04-28 16:24:24.661 -03:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+][2023-04-28 16:24:25.026 -03:00 [INF] Executed DbCommand (144ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+][2023-04-28 16:24:25.032 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+][2023-04-28 16:24:25.096 -03:00 [INF] Executed DbCommand (52ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+][2023-04-28 16:24:25.315 -03:00 [INF] Executed DbCommand (215ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+][2023-04-28 16:24:25.353 -03:00 [INF] Applying migration '20230428192219_InitialCreate'.
+][2023-04-28 16:24:25.472 -03:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [tbl_Category] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] NVARCHAR(80) NULL,
+    CONSTRAINT [PK_tbl_Category] PRIMARY KEY ([Id])
+);
+][2023-04-28 16:24:25.492 -03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [tbl_Customer] (
+    [Code] NVARCHAR(20) NOT NULL,
+    [Name] NVARCHAR(200) NOT NULL,
+    [Address] NVARCHAR(200) NULL,
+    [Phoneno] NVARCHAR(50) NULL,
+    [Email] NVARCHAR(50) NULL,
+    [IsActive] BIT NULL,
+    [CreateUser] NVARCHAR(50) NULL,
+    [ModifyUser] NVARCHAR(50) NULL,
+    [CreateDate] DATETIME NULL DEFAULT (GETDATE()),
+    [ModifyDate] DATETIME NULL,
+    CONSTRAINT [PK_tbl_customer] PRIMARY KEY ([Code])
+);
+][2023-04-28 16:24:25.495 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [tbl_mastervariant] (
+    [Id] int NOT NULL IDENTITY,
+    [VarintName] VARCHAR(20) NULL,
+    [VarinatType] VARCHAR(1) NULL,
+    [IsActive] BIT NULL,
+    CONSTRAINT [PK_tbl_mastervariant] PRIMARY KEY ([Id])
+);
+][2023-04-28 16:24:25.499 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [tbl_product] (
+    [Code] VARCHAR(20) NOT NULL,
+    [Name] VARCHAR(250) NULL,
+    [Price] decimal(18,3) NULL,
+    [Category] INT NULL,
+    [Remarks] VARCHAR(50) NULL,
+    CONSTRAINT [PK_tbl_product] PRIMARY KEY ([Code])
+);
+][2023-04-28 16:24:25.502 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [tbl_productvarinat] (
+    [ID] int NOT NULL IDENTITY,
+    [ProductCode] VARCHAR(20) NOT NULL,
+    [ColorId] INT NULL,
+    [SizeId] INT NULL,
+    [Remarks] VARCHAR(100) NULL,
+    [Price] decimal(18,2) NULL,
+    [Isactive] BIT NULL,
+    CONSTRAINT [PK_tbl_productvarinat] PRIMARY KEY ([ID])
+);
+][2023-04-28 16:24:25.506 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [tbl_role] (
+    [Roleid] VARCHAR(50) NOT NULL,
+    [Name] VARCHAR(50) NULL,
+    CONSTRAINT [PK_tbl_role] PRIMARY KEY ([Roleid])
+);
+][2023-04-28 16:24:25.510 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [tbl_SalesHeader] (
+    [InvoiceNo] VARCHAR(20) NOT NULL,
+    [InvoiceDate] smalldatetime NOT NULL DEFAULT (GETDATE()),
+    [CustumerId] VARCHAR(20) NOT NULL,
+    [CustomerName] VARCHAR(100) NULL,
+    [DeliveryAddress] nvarchar(max) NULL,
+    [Remarks] VARCHAR NULL,
+    [Total] numeric(18,2) NULL,
+    [Tax] numeric(18,4) NULL,
+    [NetTotal] numeric(18,2) NULL,
+    [CreateUser] VARCHAR(50) NULL,
+    [CreateDate] smalldatetime NULL,
+    [ModifyUser] VARCHAR(50) NULL,
+    [ModifyDate] smalldatetime NULL,
+    CONSTRAINT [PK_tbl_SaleHeader] PRIMARY KEY ([InvoiceNo])
+);
+][2023-04-28 16:24:25.514 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [tbl_SalesProductInfo] (
+    [InvoiceNo] VARCHAR(20) NOT NULL,
+    [ProductCode] VARCHAR(20) NOT NULL,
+    [ProductName] VARCHAR(100) NULL,
+    [Qty] int NULL,
+    [SalesPrice] numeric(18,3) NULL,
+    [Total] numeric(18,2) NULL,
+    [CreateUser] VARCHAR(50) NULL,
+    [CreateDate] smalldatetime NULL DEFAULT (GETDATE()),
+    [ModifyUser] VARCHAR(50) NULL,
+    [ModifyDate] smalldatetime NULL,
+    CONSTRAINT [PK_tbl_SalesInvoiceDetail] PRIMARY KEY ([InvoiceNo], [ProductCode])
+);
+][2023-04-28 16:24:25.517 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [tbl_user] (
+    [userid] VARCHAR(50) NOT NULL,
+    [Name] VARCHAR(50) NULL,
+    [Password] Varchar(50) NULL,
+    [Email] VARCHAR(50) NULL,
+    [Role] VARCHAR(50) NULL,
+    [IsActive] bit NULL,
+    CONSTRAINT [PK_tbl_User] PRIMARY KEY ([userid])
+);
+][2023-04-28 16:24:25.537 -03:00 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX [IX_Category_Name] ON [tbl_Category] ([Name]) WHERE [Name] IS NOT NULL;
+][2023-04-28 16:24:25.542 -03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX [IX_Customer_Name] ON [tbl_Customer] ([Name]);
+][2023-04-28 16:24:25.547 -03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20230428192219_InitialCreate', N'6.0.6');
+][2023-04-28 16:28:48.882 -03:00 [INF] Now listening on: https://localhost:7118
+][2023-04-28 16:28:49.082 -03:00 [INF] Now listening on: http://localhost:5075
+][2023-04-28 16:28:49.091 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+][2023-04-28 16:28:49.092 -03:00 [INF] Hosting environment: Development
+][2023-04-28 16:28:49.092 -03:00 [INF] Content root path: /home/carlos/temp/dev/Fork Projects Github/SalesOrderAPI/
+][2023-04-28 16:29:10.486 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger - -
+][2023-04-28 16:29:11.747 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger - - - 301 0 - 1264.3063ms
+][2023-04-28 16:29:11.907 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/index.html - -
+][2023-04-28 16:29:12.294 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/index.html - - - 200 - text/html;charset=utf-8 386.8084ms
+][2023-04-28 16:29:13.052 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/swagger-ui.css - -
+][2023-04-28 16:29:13.466 -03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+][2023-04-28 16:29:13.466 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/swagger-ui.css - - - 200 143632 text/css 414.4553ms
+][2023-04-28 16:29:13.794 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/swagger-ui-bundle.js - -
+][2023-04-28 16:29:13.794 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - -
+][2023-04-28 16:29:13.794 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/swagger-ui-standalone-preset.js - -
+][2023-04-28 16:29:13.799 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/_framework/aspnetcore-browser-refresh.js - - - 200 11966 application/javascript;+charset=utf-8 4.6695ms
+][2023-04-28 16:29:14.188 -03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+][2023-04-28 16:29:14.189 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/swagger-ui-standalone-preset.js - - - 200 337162 application/javascript 394.8489ms
+][2023-04-28 16:29:14.369 -03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+][2023-04-28 16:29:14.370 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/swagger-ui-bundle.js - - - 200 1092889 application/javascript 576.0960ms
+][2023-04-28 16:29:15.440 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - -
+][2023-04-28 16:29:15.811 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 371.2845ms
+][2023-04-28 16:33:45.164 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/Master/GetCategory - -
+][2023-04-28 16:33:45.459 -03:00 [INF] Executing endpoint 'SalesOrderAPI.Controllers.MasterController.GetCategory (SalesOrderAPI)'
+][2023-04-28 16:33:46.103 -03:00 [INF] Route matched with {action = "GetCategory", controller = "Master"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[CategoryEntity]] GetCategory() on controller SalesOrderAPI.Controllers.MasterController (SalesOrderAPI).
+][2023-04-28 16:33:49.698 -03:00 [INF] Entity Framework Core 6.0.6 initialized 'Sales_DBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.6' with options: None
+][2023-04-28 16:33:53.437 -03:00 [INF] Executed DbCommand (90ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Name]
+FROM [tbl_Category] AS [t]
+][2023-04-28 16:33:53.707 -03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[CategoryEntity, SalesOrderAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+][2023-04-28 16:33:53.757 -03:00 [INF] Executed action SalesOrderAPI.Controllers.MasterController.GetCategory (SalesOrderAPI) in 7638.6235ms
+][2023-04-28 16:33:53.758 -03:00 [INF] Executed endpoint 'SalesOrderAPI.Controllers.MasterController.GetCategory (SalesOrderAPI)'
+][2023-04-28 16:33:53.767 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/Master/GetCategory - - - 200 - application/json;+charset=utf-8 8603.1315ms
+][2023-04-28 16:34:51.638 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/Master/GetCategory - -
+][2023-04-28 16:34:51.641 -03:00 [INF] Executing endpoint 'SalesOrderAPI.Controllers.MasterController.GetCategory (SalesOrderAPI)'
+][2023-04-28 16:34:51.641 -03:00 [INF] Route matched with {action = "GetCategory", controller = "Master"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[CategoryEntity]] GetCategory() on controller SalesOrderAPI.Controllers.MasterController (SalesOrderAPI).
+][2023-04-28 16:34:51.644 -03:00 [INF] Entity Framework Core 6.0.6 initialized 'Sales_DBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.6' with options: None
+][2023-04-28 16:34:51.659 -03:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Name]
+FROM [tbl_Category] AS [t]
+][2023-04-28 16:34:51.660 -03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[CategoryEntity, SalesOrderAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+][2023-04-28 16:34:51.661 -03:00 [INF] Executed action SalesOrderAPI.Controllers.MasterController.GetCategory (SalesOrderAPI) in 19.7734ms
+][2023-04-28 16:34:51.661 -03:00 [INF] Executed endpoint 'SalesOrderAPI.Controllers.MasterController.GetCategory (SalesOrderAPI)'
+][2023-04-28 16:34:51.662 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/Master/GetCategory - - - 200 - application/json;+charset=utf-8 23.7600ms
+][2023-04-28 16:35:08.316 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7118/Product/Getbycategory?Code=1 - -
+][2023-04-28 16:35:08.326 -03:00 [INF] Executing endpoint 'SalesOrderAPI.Controllers.ProductController.Getbycategory (SalesOrderAPI)'
+][2023-04-28 16:35:08.363 -03:00 [INF] Route matched with {action = "Getbycategory", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.List`1[ProductEntity]] Getbycategory(Int32) on controller SalesOrderAPI.Controllers.ProductController (SalesOrderAPI).
+][2023-04-28 16:35:08.531 -03:00 [INF] Entity Framework Core 6.0.6 initialized 'Sales_DBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.6' with options: None
+][2023-04-28 16:35:08.798 -03:00 [INF] Executed DbCommand (83ms) [Parameters=[@__Category_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Code], [t].[Category], [t].[Name], [t].[Price], [t].[Remarks]
+FROM [tbl_product] AS [t]
+WHERE [t].[Category] = @__Category_0
+][2023-04-28 16:35:08.807 -03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProductEntity, SalesOrderAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+][2023-04-28 16:35:08.812 -03:00 [INF] Executed action SalesOrderAPI.Controllers.ProductController.Getbycategory (SalesOrderAPI) in 449.4414ms
+][2023-04-28 16:35:08.813 -03:00 [INF] Executed endpoint 'SalesOrderAPI.Controllers.ProductController.Getbycategory (SalesOrderAPI)'
+][2023-04-28 16:35:08.814 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7118/Product/Getbycategory?Code=1 - - - 200 - application/json;+charset=utf-8 498.5369ms
+][2023-04-28 16:37:16.592 -03:00 [INF] Application is shutting down...
+]
